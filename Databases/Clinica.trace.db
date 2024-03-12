@@ -1,0 +1,6 @@
+2024-03-07 16:12:33.390434-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS (NOMBRE, APELLIDO, MATRICULA) VALUES (?,?,?) [42104-224]
+2024-03-07 16:39:24.750832-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "Perez"
+Data conversion error converting "Perez" [22018-224]
