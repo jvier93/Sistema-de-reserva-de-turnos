@@ -4,13 +4,18 @@ import com.dh.sistemadereservadeturnos.dao.H2DB;
 import com.dh.sistemadereservadeturnos.model.Odontologo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class OdontologoServiceTest {
 
+@SpringBootTest
+class OdontologoServiceTest {
+    @Autowired
+    private OdontologoService odontologoService;
 
     @BeforeEach
     public void setUpDB() {
@@ -24,7 +29,6 @@ class OdontologoServiceTest {
 
         //DADO
         Odontologo odontologo = new Odontologo("Pepe", "Perez", 1);
-        OdontologoService odontologoService = new OdontologoService();
 
 
         //CUANDO
@@ -40,7 +44,6 @@ class OdontologoServiceTest {
     public void testListarTodosOdontologo() {
         //DADO
         Odontologo odontologo = new Odontologo("Pepe", "Perez", 1);
-        OdontologoService odontologoService = new OdontologoService();
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
@@ -54,7 +57,6 @@ class OdontologoServiceTest {
     public void testBuscarOdontologoPorId() {
         //DADO
         Odontologo odontologo = new Odontologo("Pepe", "Perez", 1);
-        OdontologoService odontologoService = new OdontologoService();
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
@@ -69,7 +71,6 @@ class OdontologoServiceTest {
         //DADO
         Odontologo odontologo = new Odontologo("Pepe", "Perez", 1);
 
-        OdontologoService odontologoService = new OdontologoService();
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
@@ -89,7 +90,6 @@ class OdontologoServiceTest {
 
         //Debemos conocer el id del odontologo que queremos actualizar.
         Odontologo odontologo2 = new Odontologo(1, "Jose", "Perez", 1);
-        OdontologoService odontologoService = new OdontologoService();
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO

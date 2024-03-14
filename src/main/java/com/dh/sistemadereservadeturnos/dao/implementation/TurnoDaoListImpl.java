@@ -3,10 +3,12 @@ package com.dh.sistemadereservadeturnos.dao.implementation;
 import com.dh.sistemadereservadeturnos.dao.IDao;
 import com.dh.sistemadereservadeturnos.model.Turno;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class TurnoDaoListImpl implements IDao<Turno> {
 
     private final Logger LOGGER = Logger.getLogger(TurnoDaoListImpl.class);

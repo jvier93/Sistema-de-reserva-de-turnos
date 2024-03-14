@@ -15,8 +15,8 @@ public class PacienteService implements IPacienteService {
 
     private IDao<Paciente> iDao;
 
-    public PacienteService() {
-        this.iDao = new PacienteDaoH2Impl();
+    public PacienteService(PacienteDaoH2Impl iDao) {
+        this.iDao = iDao;
     }
 
     @Override

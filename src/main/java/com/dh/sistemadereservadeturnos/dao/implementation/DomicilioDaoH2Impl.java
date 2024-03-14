@@ -5,10 +5,12 @@ import com.dh.sistemadereservadeturnos.dao.IDao;
 import com.dh.sistemadereservadeturnos.model.Domicilio;
 import com.dh.sistemadereservadeturnos.model.Odontologo;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.List;
 
+@Component
 public class DomicilioDaoH2Impl implements IDao<Domicilio> {
 
     private final Logger LOGGER = Logger.getLogger(DomicilioDaoH2Impl.class);

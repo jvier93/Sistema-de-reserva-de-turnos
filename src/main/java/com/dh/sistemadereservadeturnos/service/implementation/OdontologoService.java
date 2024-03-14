@@ -14,9 +14,8 @@ public class OdontologoService implements IOdontologoService {
     private IDao<Odontologo> iDao;
 
 
-    //Implementamos odontologo service directamente con la implementacion de H2.
-    public OdontologoService() {
-        this.iDao = new OdontologoDaoH2Impl();
+    public OdontologoService(OdontologoDaoH2Impl iDao) {
+        this.iDao = iDao;
     }
 
     @Override

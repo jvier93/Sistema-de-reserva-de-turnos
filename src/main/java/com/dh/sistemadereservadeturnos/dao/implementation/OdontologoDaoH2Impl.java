@@ -4,11 +4,14 @@ import com.dh.sistemadereservadeturnos.dao.H2DB;
 import com.dh.sistemadereservadeturnos.dao.IDao;
 import com.dh.sistemadereservadeturnos.model.Odontologo;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Component
 public class OdontologoDaoH2Impl implements IDao<Odontologo> {
     private final Logger LOGGER = Logger.getLogger(OdontologoDaoH2Impl.class);
 

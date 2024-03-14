@@ -4,15 +4,17 @@ import com.dh.sistemadereservadeturnos.dao.IDao;
 import com.dh.sistemadereservadeturnos.dao.implementation.DomicilioDaoH2Impl;
 import com.dh.sistemadereservadeturnos.model.Domicilio;
 import com.dh.sistemadereservadeturnos.service.IDomicilioService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DomicilioService implements IDomicilioService {
 
     IDao<Domicilio> idao;
 
-    public DomicilioService() {
-        this.idao = new DomicilioDaoH2Impl();
+    public DomicilioService(DomicilioDaoH2Impl idao) {
+        this.idao = idao;
     }
 
     @Override

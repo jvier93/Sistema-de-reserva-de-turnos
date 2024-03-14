@@ -4,6 +4,7 @@ import com.dh.sistemadereservadeturnos.dao.IDao;
 import com.dh.sistemadereservadeturnos.dao.implementation.TurnoDaoListImpl;
 import com.dh.sistemadereservadeturnos.model.Turno;
 import com.dh.sistemadereservadeturnos.service.ITurnoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -13,9 +14,8 @@ public class TurnoService implements ITurnoService {
     private IDao<Turno> iDao;
 
 
-    public TurnoService() {
-        this.iDao = new TurnoDaoListImpl();
-
+    public TurnoService(TurnoDaoListImpl iDao) {
+        this.iDao = iDao;
     }
 
     @Override

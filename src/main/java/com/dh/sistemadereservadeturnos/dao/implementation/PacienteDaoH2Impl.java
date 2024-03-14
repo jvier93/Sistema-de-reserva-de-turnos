@@ -6,10 +6,12 @@ import com.dh.sistemadereservadeturnos.model.Domicilio;
 import com.dh.sistemadereservadeturnos.model.Odontologo;
 import com.dh.sistemadereservadeturnos.model.Paciente;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.List;
 
+@Component
 public class PacienteDaoH2Impl implements IDao<Paciente> {
     private final Logger LOGGER = Logger.getLogger(PacienteDaoH2Impl.class);
 
