@@ -16,18 +16,18 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Odontologo {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String nombre;
     private String apellido;
     private Integer matricula;
-
     @OneToMany(mappedBy = "odontologo", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    //@JsonIgnore
     private Set<Turno> turnoSet = new HashSet<>();
 
 
