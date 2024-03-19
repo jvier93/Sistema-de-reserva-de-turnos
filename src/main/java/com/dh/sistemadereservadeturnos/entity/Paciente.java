@@ -30,7 +30,7 @@ public class Paciente {
     @JoinColumn(name = "id")
     private Domicilio domicilio;
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    //@JsonIgnore
+
     private Set<Turno> turnosSet = new HashSet<>();
 
 }

@@ -1,6 +1,8 @@
 package com.dh.sistemadereservadeturnos.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,9 +23,11 @@ public class Turno {
     private Long id;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "odontologo_id")
+    @JsonBackReference("odontologo-bidireccional")
     private Odontologo odontologo;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "paciente_id")
+    @JsonBackReference("paciente-bidireccional")
     private Paciente paciente;
     private LocalDate fecha;
 
