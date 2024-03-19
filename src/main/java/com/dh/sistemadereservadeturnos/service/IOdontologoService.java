@@ -1,18 +1,21 @@
 package com.dh.sistemadereservadeturnos.service;
 
-import com.dh.sistemadereservadeturnos.model.Odontologo;
+import com.dh.sistemadereservadeturnos.entity.Odontologo;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IOdontologoService {
-    com.dh.sistemadereservadeturnos.model.Odontologo guardar(Odontologo odontologo);
+    Odontologo guardar(Odontologo odontologo);
 
     List<Odontologo> listarTodos();
 
-    Odontologo buscarPorId(Integer id);
+    Odontologo buscarPorId(Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     void actualizar(Odontologo odontologo);
+
+    Optional<Odontologo> buscarPorMatricula(String matricula);
 
 }

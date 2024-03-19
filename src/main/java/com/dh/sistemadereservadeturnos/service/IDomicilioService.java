@@ -1,7 +1,6 @@
 package com.dh.sistemadereservadeturnos.service;
 
-import com.dh.sistemadereservadeturnos.model.Domicilio;
-import com.dh.sistemadereservadeturnos.model.Paciente;
+import com.dh.sistemadereservadeturnos.entity.Domicilio;
 
 import java.util.List;
 
@@ -12,7 +11,7 @@ public interface IDomicilioService {
 
     List<Domicilio> listarTodos();
 
-    Domicilio buscarPorId(Integer id);
+    Domicilio buscarPorId(Long id);
 
     void eliminar(Integer id);
 

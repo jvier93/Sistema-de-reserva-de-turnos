@@ -3,7 +3,7 @@
 [2024-03-07 16:47:54] [ INFO ] [OdontologoDaoH2Impl:76] Se buscaron todos los odontologos
 [2024-03-07 16:47:54] [ INFO ] [H2DB:37] Se creo la tabla odontologos
 [2024-03-07 16:47:54] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
-[2024-03-07 16:47:54] [ INFO ] [OdontologoDaoH2Impl:172] Se actualizo un Odontologo com.dh.sistemadereservadeturnos.model.Odontologo@7b8b43c7
+[2024-03-07 16:47:54] [ INFO ] [OdontologoDaoH2Impl:172] Se actualizo un Odontologo com.dh.sistemadereservadeturnos.entity.Odontologo@7b8b43c7
 [2024-03-07 16:47:55] [ INFO ] [OdontologoDaoH2Impl:110] Se busco un odontologo 
 [2024-03-07 16:47:55] [ INFO ] [H2DB:37] Se creo la tabla odontologos
 [2024-03-07 16:47:55] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
@@ -46,7 +46,7 @@
 [2024-03-08 20:50:39] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 20:50:39] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-08 20:50:39] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
-[2024-03-08 20:50:39] [ INFO ] [OdontologoDaoH2Impl:172] Se actualizo un Odontologo com.dh.sistemadereservadeturnos.model.Odontologo@3148f668
+[2024-03-08 20:50:39] [ INFO ] [OdontologoDaoH2Impl:172] Se actualizo un Odontologo com.dh.sistemadereservadeturnos.entity.Odontologo@3148f668
 [2024-03-08 20:50:40] [ INFO ] [OdontologoDaoH2Impl:110] Se busco un odontologo 
 [2024-03-08 20:50:40] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-08 20:50:40] [ INFO ] [H2DB:59] Se creo la tabla domicilios
@@ -74,22 +74,22 @@
 [2024-03-08 21:40:31] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 21:40:31] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-08 21:40:31] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
-[2024-03-08 21:40:31] [ ERROR] [PacienteDaoH2Impl:46] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.model.Domicilio.getId()" is null
+[2024-03-08 21:40:31] [ ERROR] [PacienteDaoH2Impl:46] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.entity.Domicilio.getId()" is null
 [2024-03-08 21:56:05] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-08 21:56:05] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 21:56:05] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-08 21:56:06] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
-[2024-03-08 21:56:06] [ ERROR] [PacienteDaoH2Impl:46] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.model.Domicilio.getId()" is null
+[2024-03-08 21:56:06] [ ERROR] [PacienteDaoH2Impl:46] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.entity.Domicilio.getId()" is null
 [2024-03-08 21:58:37] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-08 21:58:37] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 21:58:37] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-08 21:58:48] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
-[2024-03-08 21:59:44] [ ERROR] [PacienteDaoH2Impl:46] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.model.Domicilio.getId()" is null
+[2024-03-08 21:59:44] [ ERROR] [PacienteDaoH2Impl:46] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.entity.Domicilio.getId()" is null
 [2024-03-08 22:00:24] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-08 22:00:24] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 22:00:24] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-08 22:00:25] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
-[2024-03-08 22:00:25] [ ERROR] [PacienteDaoH2Impl:47] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.model.Domicilio.getId()" is null
+[2024-03-08 22:00:25] [ ERROR] [PacienteDaoH2Impl:47] Error al crear nuevo paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.dh.sistemadereservadeturnos.entity.Domicilio.getId()" is null
 [2024-03-08 22:38:46] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-08 22:38:46] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 22:38:46] [ INFO ] [H2DB:60] Se creo la tabla pacientes
@@ -102,7 +102,7 @@
 [2024-03-08 22:52:45] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-08 22:52:45] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 22:52:45] [ INFO ] [H2DB:60] Se creo la tabla pacientes
-[2024-03-08 22:52:54] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.model.Paciente@25f539e2
+[2024-03-08 22:52:54] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.entity.Paciente@25f539e2
 [2024-03-08 22:52:54] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
 [2024-03-08 22:52:54] [ INFO ] [PacienteDaoH2Impl:45] Se creo un paciente
 [2024-03-08 22:53:00] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
@@ -110,7 +110,7 @@
 [2024-03-08 22:55:05] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-08 22:55:05] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-08 22:55:10] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
-[2024-03-08 22:55:14] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.model.Paciente@71a85ec9
+[2024-03-08 22:55:14] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.entity.Paciente@71a85ec9
 [2024-03-08 22:55:14] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
 [2024-03-08 22:55:14] [ INFO ] [PacienteDaoH2Impl:45] Se creo un paciente
 [2024-03-10 18:08:16] [ INFO ] [H2DB:58] Se creo la tabla odontologos
@@ -161,7 +161,7 @@
 [2024-03-10 18:38:14] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-10 18:38:14] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-10 18:38:56] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
-[2024-03-10 18:39:00] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.model.Paciente@7bb0a5f2
+[2024-03-10 18:39:00] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.entity.Paciente@7bb0a5f2
 [2024-03-10 18:39:00] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
 [2024-03-10 18:39:00] [ INFO ] [PacienteDaoH2Impl:46] Se creo un paciente
 [2024-03-10 18:39:06] [ INFO ] [OdontologoDaoH2Impl:110] Se busco un odontologo 
@@ -184,7 +184,7 @@
 [2024-03-12 22:02:13] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-12 22:02:13] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-12 22:02:13] [ INFO ] [H2DB:60] Se creo la tabla pacientes
-[2024-03-12 22:03:35] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.model.Paciente@223057ff
+[2024-03-12 22:03:35] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.entity.Paciente@223057ff
 [2024-03-12 22:03:35] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
 [2024-03-12 22:03:35] [ INFO ] [PacienteDaoH2Impl:46] Se creo un paciente
 [2024-03-12 22:03:42] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
@@ -196,7 +196,7 @@
 [2024-03-12 22:14:49] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-12 22:14:49] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-12 22:14:55] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
-[2024-03-12 22:15:04] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.model.Paciente@19e07f81
+[2024-03-12 22:15:04] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.entity.Paciente@19e07f81
 [2024-03-12 22:15:04] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
 [2024-03-12 22:15:04] [ INFO ] [PacienteDaoH2Impl:46] Se creo un paciente
 [2024-03-12 22:15:08] [ INFO ] [OdontologoDaoH2Impl:110] Se busco un odontologo 
@@ -207,7 +207,7 @@
 [2024-03-12 22:15:50] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-12 22:15:50] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-12 22:16:36] [ INFO ] [OdontologoDaoH2Impl:43] Se creo un odontologo
-[2024-03-12 22:16:40] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.model.Paciente@372db97c
+[2024-03-12 22:16:40] [ INFO ] [PacienteController:29] com.dh.sistemadereservadeturnos.entity.Paciente@372db97c
 [2024-03-12 22:16:40] [ INFO ] [DomicilioDaoH2Impl:41] Se creo un domicilio
 [2024-03-12 22:16:40] [ INFO ] [PacienteDaoH2Impl:46] Se creo un paciente
 [2024-03-12 22:16:43] [ INFO ] [OdontologoDaoH2Impl:110] Se busco un odontologo 
@@ -275,7 +275,7 @@
 [2024-03-13 21:27:19] [ INFO ] [H2DB:59] Se creo la tabla domicilios
 [2024-03-13 21:27:19] [ INFO ] [H2DB:60] Se creo la tabla pacientes
 [2024-03-13 21:27:19] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
-[2024-03-13 21:27:19] [ INFO ] [OdontologoDaoH2Impl:175] Se actualizo un Odontologo com.dh.sistemadereservadeturnos.model.Odontologo@3df77dfa
+[2024-03-13 21:27:19] [ INFO ] [OdontologoDaoH2Impl:175] Se actualizo un Odontologo com.dh.sistemadereservadeturnos.entity.Odontologo@3df77dfa
 [2024-03-13 21:27:20] [ INFO ] [OdontologoDaoH2Impl:113] Se busco un odontologo 
 [2024-03-13 21:27:20] [ INFO ] [H2DB:58] Se creo la tabla odontologos
 [2024-03-13 21:27:20] [ INFO ] [H2DB:59] Se creo la tabla domicilios
@@ -299,3 +299,136 @@
 [2024-03-13 21:33:07] [ INFO ] [PacienteDaoH2Impl:48] Se creo un paciente
 [2024-03-13 21:33:07] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
 [2024-03-13 21:33:07] [ INFO ] [TurnoDaoListImpl:27] Se creo un turno
+[2024-03-14 21:23:32] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:23:32] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:23:32] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:25:13] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:25:16] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:27:50] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:27:50] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:27:50] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:29:55] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:29:55] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:29:55] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:32:23] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:32:23] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:32:23] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:32:29] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:32:33] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:32:35] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:32:35] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:32:41] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:32:41] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:35:07] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:35:07] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:35:07] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:35:19] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:35:20] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:35:23] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:35:23] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:36:14] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:36:14] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:36:14] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:36:20] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:36:23] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:37:28] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:37:28] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:37:28] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:37:33] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:37:35] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:37:37] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:37:37] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:17] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:39:17] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:39:17] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:39:28] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:39:30] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:39:32] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:39:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:45] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:45] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:45] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:47] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:47] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:47] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:48] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:48] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:39:48] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:40:28] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:40:28] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:40:28] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:40:33] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:40:34] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:40:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:40:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:42:03] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:42:03] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:42:03] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:42:08] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:42:10] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:42:15] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:42:15] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:43:44] [ INFO ] [H2DB:58] Se creo la tabla odontologos
+[2024-03-14 21:43:44] [ INFO ] [H2DB:59] Se creo la tabla domicilios
+[2024-03-14 21:43:44] [ INFO ] [H2DB:60] Se creo la tabla pacientes
+[2024-03-14 21:43:49] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:43:50] [ INFO ] [OdontologoDaoH2Impl:46] Se creo un odontologo
+[2024-03-14 21:43:53] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:43:53] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:10] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:10] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:14] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:14] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:20] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:20] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:25] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:25] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:29] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:29] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:33] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:33] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:39] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:39] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:44] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:44:44] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:45:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:45:36] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:54:48] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-14 21:54:48] [ INFO ] [OdontologoDaoH2Impl:79] Se buscaron todos los odontologos
+[2024-03-17 15:10:47] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@1c8e53b5
+[2024-03-17 15:12:38] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@7f497247
+[2024-03-17 15:13:04] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@5a386085
+[2024-03-17 15:17:11] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@635e1256
+[2024-03-17 16:36:43] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@183265db
+[2024-03-17 16:50:19] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@4c89ecf0
+[2024-03-17 16:54:14] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@11f69f99
+[2024-03-17 16:58:49] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@3d394827
+[2024-03-17 16:59:51] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@51a77f7e
+[2024-03-17 17:00:48] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@7664ad99
+[2024-03-17 17:03:08] [ INFO ] [PacienteController:27] com.dh.sistemadereservadeturnos.entity.Paciente@4c223a9e
+[2024-03-17 17:12:42] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@dda9d84
+[2024-03-17 17:19:53] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@7f2dafee
+[2024-03-17 17:20:28] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@727d3e6f
+[2024-03-17 17:32:32] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@430a51c
+[2024-03-17 17:38:47] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@430a51c
+[2024-03-17 18:18:53] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@4daf6758
+[2024-03-17 18:22:55] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@7ebcc450
+[2024-03-17 18:24:13] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@6efe74f5
+[2024-03-17 18:24:14] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@6cbb551a
+[2024-03-17 18:26:22] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@354a2a4d
+[2024-03-17 18:32:20] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@38a085b5
+[2024-03-17 18:35:27] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@6dd4f593
+[2024-03-17 18:39:31] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@52306405
+[2024-03-17 19:34:53] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@57992ce0
+[2024-03-17 19:43:48] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@361f8d42
+[2024-03-17 19:55:11] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@34e835a0
+[2024-03-19 19:11:41] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@6dd4f593
+[2024-03-19 19:18:22] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@7abe18d4
+[2024-03-19 20:00:50] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@261c5df9
+[2024-03-19 20:02:54] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@6dfec49b
+[2024-03-19 20:05:55] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@323fd1bd
+[2024-03-19 20:06:53] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@5d540163
+[2024-03-19 20:11:37] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@179fd67b
+[2024-03-19 20:16:26] [ INFO ] [PacienteController:28] com.dh.sistemadereservadeturnos.entity.Paciente@169ce56c

@@ -1,25 +1,30 @@
 package com.dh.sistemadereservadeturnos.service.implementation;
 
-import com.dh.sistemadereservadeturnos.dao.IDao;
-import com.dh.sistemadereservadeturnos.dao.implementation.TurnoDaoListImpl;
-import com.dh.sistemadereservadeturnos.model.Turno;
+import com.dh.sistemadereservadeturnos.entity.Turno;
+import com.dh.sistemadereservadeturnos.repository.ITurnoRepository;
 import com.dh.sistemadereservadeturnos.service.ITurnoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Service
 public class TurnoService implements ITurnoService {
 
-    private IDao<Turno> iDao;
+    private ITurnoRepository turnoRepository;
 
 
-    public TurnoService(TurnoDaoListImpl iDao) {
-        this.iDao = iDao;
+    public TurnoService(ITurnoRepository turnoRepository) {
+        this.turnoRepository = turnoRepository;
+    }
+
+
+    public List<Turno> listar() {
+        return turnoRepository.findAll();
     }
 
     @Override
     public Turno guardar(Turno turno) {
-        return iDao.guardar(turno);
+        return turnoRepository.save(turno);
     }
 }

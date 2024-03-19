@@ -1,8 +1,9 @@
 package com.dh.sistemadereservadeturnos.service;
 
-import com.dh.sistemadereservadeturnos.model.Paciente;
+import com.dh.sistemadereservadeturnos.entity.Paciente;
 
 import java.util.List;
+import java.util.Set;
 
 public interface IPacienteService {
 
@@ -10,9 +11,9 @@ public interface IPacienteService {
 
     List<Paciente> listarTodos();
 
-    Paciente buscarPorId(Integer id);
+    Paciente buscarPorId(Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     void actualizar(Paciente paciente);
 
