@@ -1,3 +1,5 @@
+const LISTAR_ODONTOLOGOS_URL = "http://localhost:8080/odontologo/listar";
+
 function llenarLista(idTabla = null, datos = null) {
   datos.forEach((odontologo) => {
     crearFilaEnTabla(idTabla, odontologo);
@@ -10,13 +12,13 @@ function crearFilaEnTabla(idTabla = null, datos = null) {
   let fila = document.createElement("tr");
 
   fila.innerHTML = `
-
-    <td>${datos.id}</td>
-    <td>${datos.nombre}</td>
-    <td>${datos.apellido}</td>
-    <td>${datos.matricula}</td>
-    <td><button>editar</button> <button>eliminar</button></td>
-  `;
+  
+      <td>${datos.id}</td>
+      <td>${datos.nombre}</td>
+      <td>${datos.apellido}</td>
+      <td>${datos.matricula}</td>
+      <td><button>editar</button> <button onClick="eliminarOdontologo(${datos.id})">eliminar</button></td>
+    `;
 
   tbody.appendChild(fila);
 }
@@ -41,7 +43,7 @@ function fetchOdontologos(apiUrl = null) {
 }
 
 function onLoad() {
-  fetchOdontologos("http://localhost:8080/odontologo/listar");
+  fetchOdontologos(LISTAR_ODONTOLOGOS_URL);
 }
 
 // Asigna la función al evento DOMContentLoaded

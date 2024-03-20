@@ -41,9 +41,9 @@ public class OdontologoController {
 
 
     @DeleteMapping("/eliminar/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Long id) {
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         odontologoService.eliminar(id);
-        return ResponseEntity.ok("Odontologo eliminado con exito");
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("/actualizar")
