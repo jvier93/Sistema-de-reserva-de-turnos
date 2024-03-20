@@ -1,15 +1,13 @@
 function llenarLista(idTabla = null, datos = null) {
   datos.forEach((odontologo) => {
-
     crearFilaEnTabla(idTabla, odontologo);
   });
 }
 
 function crearFilaEnTabla(idTabla = null, datos = null) {
-  let tbody = document.getElementById(idTabla).getElementsByTagName('tbody')[0];
+  let tbody = document.getElementById(idTabla).getElementsByTagName("tbody")[0];
 
-  let fila = document.createElement('tr');
-
+  let fila = document.createElement("tr");
 
   fila.innerHTML = `
 
@@ -23,6 +21,7 @@ function crearFilaEnTabla(idTabla = null, datos = null) {
   tbody.appendChild(fila);
 }
 
+//Odontologos
 
 function fetchOdontologos(apiUrl = null) {
   fetch(apiUrl)
@@ -34,7 +33,6 @@ function fetchOdontologos(apiUrl = null) {
       return respuesta.json();
     })
     .then((datos) => {
-
       llenarLista("tablaOdontologos", datos);
     })
     .catch((error) => {
@@ -43,7 +41,7 @@ function fetchOdontologos(apiUrl = null) {
 }
 
 function onLoad() {
-  fetchOdontologos("http://localhost:8080/odontologo/listar")
+  fetchOdontologos("http://localhost:8080/odontologo/listar");
 }
 
 // Asigna la función al evento DOMContentLoaded
