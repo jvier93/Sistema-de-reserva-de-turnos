@@ -36,7 +36,7 @@ public class TurnoController {
 
         ResponseEntity<Turno> response;
 
-        if (odontologoService.buscarPorId(turno.getOdontologo().getId()) != null) {
+        if (odontologoService.buscarPorId(turno.getOdontologo().getId()) != null || pacienteService.buscarPorId(turno.getPaciente().getId()) != null) {
             response = ResponseEntity.ok(turnoService.guardar(turno));
         } else {
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
