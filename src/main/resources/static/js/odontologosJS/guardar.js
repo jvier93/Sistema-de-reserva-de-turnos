@@ -45,6 +45,7 @@ function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
         text: "Odontólogo guardado exitosamente",
         icon: "success",
       });
+      fetchPacientes(LISTAR_PACIENTES_URL)
     })
     .catch((error) => {
       console.error(error);
