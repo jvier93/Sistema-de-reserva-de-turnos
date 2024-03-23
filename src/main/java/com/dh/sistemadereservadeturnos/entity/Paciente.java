@@ -29,7 +29,8 @@ public class Paciente {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id")
     private Domicilio domicilio;
-    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL)
+    @JsonIgnore
 
     private Set<Turno> turnosSet = new HashSet<>();
 

@@ -21,13 +21,11 @@ public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne()
     @JoinColumn(name = "odontologo_id")
-    @JsonBackReference("odontologo-bidireccional")
     private Odontologo odontologo;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne()
     @JoinColumn(name = "paciente_id")
-    @JsonBackReference("paciente-bidireccional")
     private Paciente paciente;
     private LocalDate fecha;
 

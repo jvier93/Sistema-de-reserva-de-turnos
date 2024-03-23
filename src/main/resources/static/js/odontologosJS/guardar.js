@@ -1,10 +1,3 @@
-const GUARDAR_ODONTOLOGO_URL = "http://localhost:8080/odontologo/guardar";
-
-function onLoad() {
-  const form = document.getElementById("formCrearOdontologo");
-  form.addEventListener("submit", submitForm);
-}
-
 function submitForm(e) {
   e.preventDefault();
 
@@ -16,6 +9,7 @@ function submitForm(e) {
   const matricula = formData.get("matricula");
 
   guardarOdontologo(GUARDAR_ODONTOLOGO_URL, nombre, apellido, matricula);
+  e.target.reset();
 }
 
 function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
@@ -45,7 +39,6 @@ function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
         text: "Odontólogo guardado exitosamente",
         icon: "success",
       });
-      fetchPacientes(LISTAR_PACIENTES_URL)
     })
     .catch((error) => {
       console.error(error);
@@ -55,6 +48,11 @@ function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
         icon: "error",
       });
     });
+}
+
+function onLoad() {
+  const form = document.getElementById("formCrearOdontologo");
+  form.addEventListener("submit", submitForm);
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);
