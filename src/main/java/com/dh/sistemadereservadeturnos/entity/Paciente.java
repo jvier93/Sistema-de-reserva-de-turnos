@@ -31,7 +31,6 @@ public class Paciente {
     private Domicilio domicilio;
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL)
     @JsonIgnore
-
     private Set<Turno> turnosSet = new HashSet<>();
 
 }

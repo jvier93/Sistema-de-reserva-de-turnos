@@ -29,7 +29,10 @@ function crearFilaEnTabla(tBody, datos = null) {
 //Odontologos
 
 function fetchOdontologos(apiUrl = null) {
-  console.log("Se ejecuto fetch");
+  if (apiUrl === null) {
+    return;
+  }
+
   fetch(apiUrl)
     .then((respuesta) => {
       if (!respuesta.ok) {

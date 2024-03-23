@@ -51,6 +51,7 @@ function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
 }
 
 function onLoad() {
+
   const form = document.getElementById("formCrearOdontologo");
   form.addEventListener("submit", submitForm);
 }
