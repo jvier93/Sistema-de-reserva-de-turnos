@@ -17,6 +17,10 @@ function crearFilaEnTabla(idTabla = null, datos = null) {
       <td>${datos.nombre}</td>
       <td>${datos.apellido}</td>
       <td>${datos.dni}</td>
+      <td>${datos.domicilio ? datos.domicilio.calle : ''}</td>
+      <td>${datos.domicilio ? datos.domicilio.numero : ''}</td>
+      <td>${datos.fechaIngreso}</td>
+
       <td><button>editar</button> <button onClick="eliminarPaciente(${datos.id})">eliminar</button></td>
     `;
 
@@ -35,6 +39,7 @@ function fetchPacientes(apiUrl = null) {
       return respuesta.json();
     })
     .then((datos) => {
+    console.log(datos);
       llenarLista("tablaPacientes", datos);
     })
     .catch((error) => {

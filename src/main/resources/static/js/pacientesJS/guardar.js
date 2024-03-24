@@ -10,24 +10,35 @@ function submitForm(e) {
 
   const form = e.target;
   const formData = new FormData(form);
-
   const nombre = formData.get("nombre");
   const apellido = formData.get("apellido");
   const dni = formData.get("dni");
-  //const domicilio = formData.get("domicilio")
-  //const fechaIngreso = formData.get("fechaIngreso")
-  console.log("se submitteo")
+  const calle = formData.get("calle");
+  const numero = formData.get("numero");
+  const localidad = formData.get("localidad");
+  const provincia = formData.get("provincia");
+  const fechaIngreso = formData.get("fechaIngreso");
+  console.log("se submitteo");
 
 
-  guardarPaciente(GUARDAR_PACIENTE_URL, nombre, apellido, dni);
+  guardarPaciente(GUARDAR_PACIENTE_URL, nombre, apellido, dni, calle, numero, localidad, provincia, fechaIngreso);
 }
 
-function guardarPaciente(apiUrl = null, nombre, apellido, dni) {
+function guardarPaciente(apiUrl = null, nombre, apellido, dni, calle, numero, localidad, provincia, fechaIngreso) {
   const nuevoPaciente = {
-    nombre: nombre,
-    apellido: apellido,
-    dni: dni
-  };
+      nombre: nombre,
+      apellido: apellido,
+      dni: dni,
+      domicilio: {
+        calle: calle,
+        numero: numero,
+        localidad: localidad,
+        provincia: provincia
+      },
+      fechaIngreso: fechaIngreso
+    };
+
+
 
   fetch(apiUrl, {
     method: "POST",
