@@ -52,9 +52,9 @@ public class OdontologoController {
         Odontologo odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
         if (odontologoBuscado != null) {
             odontologoService.actualizar(odontologo);
-            return ResponseEntity.ok("Se actualizo el odontologo con id " + odontologo.getId());
+            return ResponseEntity.ok().build();
         } else {
-            return ResponseEntity.ok("No se puede actualizar el odontologo");
+            return ResponseEntity.badRequest().build();
         }
     }
 
