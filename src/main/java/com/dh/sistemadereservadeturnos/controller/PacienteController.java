@@ -36,6 +36,7 @@ public class PacienteController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscarPorId(@PathVariable Long id) {
+<<<<<<< HEAD
         Paciente pacienteBuscado  = pacienteService.buscarPorId(id);
         if(pacienteBuscado != null){
             return ResponseEntity.ok(pacienteBuscado);
@@ -43,6 +44,9 @@ public class PacienteController {
             return ResponseEntity.notFound().build();
         }
 
+=======
+        return ResponseEntity.ok(pacienteService.buscarPorId(id));
+>>>>>>> a10bb918c3904bd006d8202049eb6f0caee98347
     }
 
     @DeleteMapping("/eliminar/{id}")
