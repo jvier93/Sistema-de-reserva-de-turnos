@@ -3,7 +3,6 @@ package com.dh.sistemadereservadeturnos.service;
 import com.dh.sistemadereservadeturnos.entity.Paciente;
 
 import java.util.List;
-import java.util.Set;
 
 public interface IPacienteService {
 

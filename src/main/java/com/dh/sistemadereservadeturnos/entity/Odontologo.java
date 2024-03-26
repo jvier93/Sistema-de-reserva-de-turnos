@@ -27,7 +27,7 @@ public class Odontologo {
     private String nombre;
     private String apellido;
     private Integer matricula;
-    @OneToMany(mappedBy = "odontologo", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "odontologo", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Turno> turnoSet = new HashSet<>();
 

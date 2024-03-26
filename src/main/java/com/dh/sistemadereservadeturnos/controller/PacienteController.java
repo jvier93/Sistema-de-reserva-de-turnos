@@ -35,26 +35,38 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Paciente> buscarPorId(@RequestParam Long id) {
-        return ResponseEntity.ok(pacienteService.buscarPorId(id));
+    public ResponseEntity<Paciente> buscarPorId(@PathVariable Long id) {
+        Paciente pacienteBuscado  = pacienteService.buscarPorId(id);
+        if(pacienteBuscado != null){
+            return ResponseEntity.ok(pacienteBuscado);
+        }else{
+            return ResponseEntity.notFound().build();
+        }
+
     }
 
     @DeleteMapping("/eliminar/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Long id) {
-        pacienteService.eliminar(id);
-        return ResponseEntity.ok("Paciente eliminado con exito");
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+        Paciente pacienteBuscado = pacienteService.buscarPorId(id);
+
+        if (pacienteBuscado != null){
+            pacienteService.eliminar(id);
+            return ResponseEntity.ok().build();
+
+        }else{
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PutMapping("/actualizar")
     public ResponseEntity<String> actualizar(@RequestBody Paciente paciente) {
 
-        ResponseEntity<String> response;
         Paciente pacienteBuscado = pacienteService.buscarPorId(paciente.getId());
         if (pacienteBuscado != null) {
             pacienteService.actualizar(paciente);
-            return ResponseEntity.ok("Se actualizo el paciente con id " + paciente.getId());
+            return ResponseEntity.ok().build();
         } else {
-            return ResponseEntity.ok("No se puede actualizar el paciente");
+            return ResponseEntity.notFound().build();
         }
     }
 

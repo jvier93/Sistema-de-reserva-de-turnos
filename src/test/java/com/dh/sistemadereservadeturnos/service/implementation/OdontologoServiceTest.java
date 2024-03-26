@@ -1,6 +1,9 @@
 package com.dh.sistemadereservadeturnos.service.implementation;
 
 import com.dh.sistemadereservadeturnos.entity.Odontologo;
+import com.dh.sistemadereservadeturnos.repository.IOdontologoRepository;
+import jakarta.transaction.Transactional;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +22,18 @@ class OdontologoServiceTest {
     private OdontologoService odontologoService;
 
 
+
+
     @Test
+    @Transactional
     public void testGuardarOdontologo() {
 
 
         //DADO
         Odontologo odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
 
 
         //CUANDO
@@ -40,6 +49,9 @@ class OdontologoServiceTest {
     public void testListarTodosOdontologo() {
         //DADO
         Odontologo odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
 
 
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
@@ -52,25 +64,49 @@ class OdontologoServiceTest {
     }
 
     @Test
+    @Transactional
     public void testBuscarOdontologoPorId() {
         //DADO
         Odontologo odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
 
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
-        Odontologo odontologoEncontrado = odontologoService.buscarPorId(1L);
+        Odontologo odontologoEncontrado = odontologoService.buscarPorId(odontologoGuardado.getId());
 
         //ENTONCES
         assertNotNull(odontologoEncontrado);
     }
 
     @Test
+    public void testBuscarOdontologoInexistentePorId() {
+        //DADO
+        Odontologo odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
+
+        odontologoService.guardar(odontologo);
+
+        //CUANDO
+        Odontologo odontologoEncontrado = odontologoService.buscarPorId(123L);
+
+        //ENTONCES
+        assertNull(odontologoEncontrado);
+    }
+
+    @Test
     public void testEliminarOdontologo() {
         //DADO
         Odontologo odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
 
-        Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
+        odontologoService.guardar(odontologo);
 
         //CUANDO
         odontologoService.eliminar(1L);
@@ -82,22 +118,27 @@ class OdontologoServiceTest {
     }
 
     @Test
+    @Transactional
     public void testActualizarOdontologo() {
 
         //DADO
         Odontologo odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
 
-        //Debemos conocer el id del odontologo que queremos actualizar.
-        Odontologo odontologo2 = new Odontologo();
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
+        odontologoGuardado.setNombre("Jose");
 
         //CUANDO
-        odontologoService.actualizar(odontologo2);
-        Odontologo odontologoActualizado = odontologoService.buscarPorId(1L);
+        odontologoService.actualizar(odontologoGuardado);
+        Odontologo odontologoActualizado = odontologoService.buscarPorId(odontologoGuardado.getId());
 
         //ENTONCES
-        assertEquals("Jose", odontologoActualizado);
+        assertEquals("Jose", odontologoActualizado.getNombre());
 
     }
+
+
 
 }

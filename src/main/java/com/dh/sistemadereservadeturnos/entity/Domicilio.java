@@ -1,5 +1,6 @@
 package com.dh.sistemadereservadeturnos.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,9 @@ public class Domicilio {
     private Integer numero;
     private String localidad;
     private String provincia;
+    @OneToOne(mappedBy = "domicilio",cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Paciente paciente;
 
 
 }

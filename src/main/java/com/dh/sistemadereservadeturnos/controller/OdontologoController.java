@@ -13,9 +13,6 @@ import java.util.Optional;
 @RequestMapping("/odontologo")
 public class OdontologoController {
 
-    private static final Logger LOGGER = Logger.getLogger(OdontologoController.class);
-
-
     private OdontologoService odontologoService;
 
 
@@ -31,7 +28,13 @@ public class OdontologoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Odontologo> buscarPorId(@PathVariable Long id) {
-        return ResponseEntity.ok(odontologoService.buscarPorId(id));
+
+        Odontologo odontologoBuscado = odontologoService.buscarPorId(id);
+        if(odontologoBuscado != null){
+            return ResponseEntity.ok(odontologoBuscado);
+        }else{
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @GetMapping("/listar")
@@ -42,19 +45,26 @@ public class OdontologoController {
 
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
-        odontologoService.eliminar(id);
-        return ResponseEntity.ok().build();
+        Odontologo odontologoBuscado = odontologoService.buscarPorId(id);
+
+        if(odontologoBuscado != null){
+            odontologoService.eliminar(id);
+            return ResponseEntity.ok().build();
+        }else{
+            return ResponseEntity.notFound().build();
+        }
+
+
     }
 
     @PutMapping("/actualizar")
     public ResponseEntity<String> actualizar(@RequestBody Odontologo odontologo) {
-        ResponseEntity<String> response;
         Odontologo odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
         if (odontologoBuscado != null) {
             odontologoService.actualizar(odontologo);
             return ResponseEntity.ok().build();
         } else {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.notFound().build();
         }
     }
 
