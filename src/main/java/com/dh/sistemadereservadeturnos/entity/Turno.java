@@ -29,7 +29,7 @@ public class Turno {
     @JoinColumn(name = "paciente_id")
     private Paciente paciente;
     private LocalDate fecha;
-    private LocalTime hora;
+    private String hora;
 
 
 }
