@@ -3,6 +3,7 @@ package com.dh.sistemadereservadeturnos.service.implementation;
 import com.dh.sistemadereservadeturnos.entity.Domicilio;
 import com.dh.sistemadereservadeturnos.entity.Odontologo;
 import com.dh.sistemadereservadeturnos.entity.Paciente;
+import com.dh.sistemadereservadeturnos.exception.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -95,10 +96,11 @@ class PacienteServiceTest {
 
         //CUANDO
         pacienteService.eliminar(pacienteGuardado.getId());
-        Paciente pacienteEliminado = pacienteService.buscarPorId(pacienteGuardado.getId());
+
 
         //ENTONCES
-        assertNull(pacienteEliminado);
+        assertThrows(ResourceNotFoundException.class,()->{pacienteService.buscarPorId(pacienteGuardado.getId());});
+
 
     }
 

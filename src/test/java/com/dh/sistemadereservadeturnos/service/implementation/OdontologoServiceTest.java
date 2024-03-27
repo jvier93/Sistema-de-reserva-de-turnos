@@ -1,6 +1,7 @@
 package com.dh.sistemadereservadeturnos.service.implementation;
 
 import com.dh.sistemadereservadeturnos.entity.Odontologo;
+import com.dh.sistemadereservadeturnos.exception.ResourceNotFoundException;
 import com.dh.sistemadereservadeturnos.repository.IOdontologoRepository;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.AfterEach;
@@ -92,13 +93,11 @@ class OdontologoServiceTest {
         odontologoService.guardar(odontologo);
 
         //CUANDO
-        Odontologo odontologoEncontrado = odontologoService.buscarPorId(123L);
-
         //ENTONCES
-        assertNull(odontologoEncontrado);
+        assertThrows(ResourceNotFoundException.class,()->{odontologoService.buscarPorId(1223L);});
     }
 
-    @Test
+    @Test()
     public void testEliminarOdontologo() {
         //DADO
         Odontologo odontologo = new Odontologo();
@@ -106,14 +105,14 @@ class OdontologoServiceTest {
         odontologo.setApellido("apellido");
         odontologo.setMatricula(123);
 
-        odontologoService.guardar(odontologo);
+       Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
-        odontologoService.eliminar(1L);
-        Odontologo odontologoEliminado = odontologoService.buscarPorId(1L);
+        odontologoService.eliminar(odontologoGuardado.getId());
 
         //ENTONCES
-        assertNull(odontologoEliminado);
+
+       assertThrows(ResourceNotFoundException.class,()->{odontologoService.buscarPorId(odontologoGuardado.getId());});
 
     }
 

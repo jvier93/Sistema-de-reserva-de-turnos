@@ -4,6 +4,7 @@ import com.dh.sistemadereservadeturnos.entity.Odontologo;
 import com.dh.sistemadereservadeturnos.entity.Paciente;
 import com.dh.sistemadereservadeturnos.service.implementation.PacienteService;
 import org.apache.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,6 @@ import java.util.List;
 @RequestMapping("/paciente")
 public class PacienteController {
 
-    private static final Logger LOGGER = Logger.getLogger(PacienteController.class);
 
 
     private PacienteService pacienteService;
@@ -24,9 +24,10 @@ public class PacienteController {
     }
 
     @PostMapping("/guardar")
-    public Paciente guardar(@RequestBody Paciente paciente) {
-        LOGGER.info(paciente);
-        return pacienteService.guardar(paciente);
+    public ResponseEntity<Paciente> guardar(@RequestBody Paciente paciente) {
+        Paciente pacienteGuardado = pacienteService.guardar(paciente);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(pacienteGuardado);
     }
 
     @GetMapping("/listar")
@@ -36,42 +37,26 @@ public class PacienteController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscarPorId(@PathVariable Long id) {
-<<<<<<< HEAD
-        Paciente pacienteBuscado  = pacienteService.buscarPorId(id);
-        if(pacienteBuscado != null){
-            return ResponseEntity.ok(pacienteBuscado);
-        }else{
-            return ResponseEntity.notFound().build();
-        }
 
-=======
-        return ResponseEntity.ok(pacienteService.buscarPorId(id));
->>>>>>> a10bb918c3904bd006d8202049eb6f0caee98347
+        Paciente pacienteBuscado  = pacienteService.buscarPorId(id);
+        return ResponseEntity.ok(pacienteBuscado);
+
+
     }
 
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
-        Paciente pacienteBuscado = pacienteService.buscarPorId(id);
-
-        if (pacienteBuscado != null){
             pacienteService.eliminar(id);
-            return ResponseEntity.ok().build();
-
-        }else{
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
     @PutMapping("/actualizar")
     public ResponseEntity<String> actualizar(@RequestBody Paciente paciente) {
 
-        Paciente pacienteBuscado = pacienteService.buscarPorId(paciente.getId());
-        if (pacienteBuscado != null) {
+
             pacienteService.actualizar(paciente);
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
     }
 
 }

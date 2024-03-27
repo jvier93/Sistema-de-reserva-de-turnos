@@ -16,6 +16,6 @@ public interface IOdontologoService {
 
     void actualizar(Odontologo odontologo);
 
-    Optional<Odontologo> buscarPorMatricula(String matricula);
+    Odontologo buscarPorMatricula(String matricula);
 
 }

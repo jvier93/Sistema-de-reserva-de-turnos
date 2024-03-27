@@ -34,54 +34,35 @@ public class TurnoController {
     @GetMapping("/{id}")
     public  ResponseEntity<Turno> buscarPorId(@PathVariable Long id){
         Turno turnoBuscado  = turnoService.buscarPorId(id);
-        if(turnoBuscado != null){
-            return ResponseEntity.ok(turnoBuscado);
-        }else{
-            return ResponseEntity.notFound().build();
-        }
+        return ResponseEntity.ok(turnoBuscado);
+
     }
 
 
     @PostMapping("/guardar")
     public ResponseEntity<Turno> guardar(@RequestBody Turno turno) {
 
-        ResponseEntity<Turno> response;
-        Odontologo odontologoBuscado = odontologoService.buscarPorId(turno.getOdontologo().getId());
-        Paciente pacienteBuscado = pacienteService.buscarPorId(turno.getPaciente().getId());
+       Turno turnoGuardado = turnoService.guardar(turno);
+        return ResponseEntity.status(HttpStatus.CREATED).body(turnoGuardado);
 
-        if (odontologoBuscado != null || pacienteBuscado != null) {
-            response = ResponseEntity.ok(turnoService.guardar(turno));
-        } else {
-            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-        return response;
+
     }
 
 
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<String> eliminar(@PathVariable Long id){
-        Turno turnoBuscado = turnoService.buscarPorId(id);
-        if(turnoBuscado != null){
+
             turnoService.eliminar(id);
-            return ResponseEntity.ok().build();
-        }else{
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
     }
 
     @PutMapping("/actualizar")
     public ResponseEntity<String> actualizar(@RequestBody Turno turno){
-        Turno turnoBuscado = turnoService.buscarPorId(turno.getId());
-        Odontologo odontologoBuscado = odontologoService.buscarPorId(turno.getOdontologo().getId());
-        Paciente pacienteBuscado = pacienteService.buscarPorId(turno.getPaciente().getId());
 
-
-        if(turnoBuscado != null && odontologoBuscado != null && pacienteBuscado != null ){
             turnoService.actualizar(turno);
-            return ResponseEntity.ok().build();
-        }else{
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
     }
 
 }

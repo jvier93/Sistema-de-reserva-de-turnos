@@ -4,6 +4,7 @@ import com.dh.sistemadereservadeturnos.entity.Domicilio;
 import com.dh.sistemadereservadeturnos.entity.Odontologo;
 import com.dh.sistemadereservadeturnos.entity.Paciente;
 import com.dh.sistemadereservadeturnos.entity.Turno;
+import com.dh.sistemadereservadeturnos.exception.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -162,11 +163,11 @@ class TurnoServiceTest {
 
         //CUANDO
         turnoService.eliminar(turnoGuardado.getId());
-        Turno turnoEliminado = turnoService.buscarPorId(turnoGuardado.getId());
 
 
         //ENTONCES
-        assertNull(turnoEliminado);
+        assertThrows(ResourceNotFoundException.class,()->{turnoService.buscarPorId(turnoGuardado.getId());});
+
     }
 
 
