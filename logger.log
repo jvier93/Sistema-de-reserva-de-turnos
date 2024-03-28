@@ -519,3 +519,7 @@
 [2024-03-27 23:05:16] [ INFO ] [PacienteService:62] Fechad de ingreso null
 [2024-03-27 23:06:11] [ INFO ] [PacienteService:62] Fechad de ingreso null
 [2024-03-27 23:06:36] [ INFO ] [PacienteService:62] Fechad de ingreso null
+[2024-03-28 12:48:54] [ ERROR] [OdontologoService:42] Odontologo no encontrado con id: 1223
+[2024-03-28 12:48:54] [ ERROR] [OdontologoService:42] Odontologo no encontrado con id: 6
+[2024-03-28 12:55:24] [ ERROR] [PacienteService:41] Paciente no encontrado con id: 2
+[2024-03-28 12:58:45] [ ERROR] [TurnoService:57] Turno no encontrado con id: 4

@@ -4,7 +4,9 @@ import com.dh.sistemadereservadeturnos.entity.Odontologo;
 import com.dh.sistemadereservadeturnos.exception.ResourceNotFoundException;
 import com.dh.sistemadereservadeturnos.repository.IOdontologoRepository;
 import jakarta.transaction.Transactional;
+import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,16 @@ class OdontologoServiceTest {
     @Autowired
     private OdontologoService odontologoService;
 
+    private Odontologo odontologo;
+    @BeforeEach
+    public void setUp(){
 
+        //Instanciamos variables necesarias
+        odontologo = new Odontologo();
+        odontologo.setNombre("nombre");
+        odontologo.setApellido("apellido");
+        odontologo.setMatricula(123);
+    }
 
 
     @Test
@@ -31,10 +42,6 @@ class OdontologoServiceTest {
 
 
         //DADO
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
 
 
         //CUANDO
@@ -48,13 +55,7 @@ class OdontologoServiceTest {
 
     @Test
     public void testListarTodosOdontologo() {
-        //DADO
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
-
+  //DADO
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
@@ -68,11 +69,6 @@ class OdontologoServiceTest {
     @Transactional
     public void testBuscarOdontologoPorId() {
         //DADO
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
@@ -85,11 +81,6 @@ class OdontologoServiceTest {
     @Test
     public void testBuscarOdontologoInexistentePorId() {
         //DADO
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         odontologoService.guardar(odontologo);
 
         //CUANDO
@@ -100,12 +91,7 @@ class OdontologoServiceTest {
     @Test()
     public void testEliminarOdontologo() {
         //DADO
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
-       Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
+        Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
 
         //CUANDO
         odontologoService.eliminar(odontologoGuardado.getId());
@@ -121,11 +107,6 @@ class OdontologoServiceTest {
     public void testActualizarOdontologo() {
 
         //DADO
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
         odontologoGuardado.setNombre("Jose");
 

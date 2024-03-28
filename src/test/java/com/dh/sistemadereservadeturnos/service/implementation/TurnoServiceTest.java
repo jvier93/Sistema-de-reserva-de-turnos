@@ -28,18 +28,24 @@ class TurnoServiceTest {
     @Autowired
     private OdontologoService odontologoService;
 
+    Odontologo odontologo;
+    Paciente paciente;
+    Domicilio domicilio;
+    Turno turno;
 
-    @Test
-    public void testListarTurnos(){
-        //DADO
-        Domicilio domicilio = new Domicilio();
+    @BeforeEach
+    public void setUp(){
+
+        //Instanciamos variables necesarias
+
+        domicilio = new Domicilio();
         domicilio.setCalle("calle1");
         domicilio.setLocalidad("localidad1");
         domicilio.setNumero(1);
         domicilio.setProvincia("provincia1");
 
 
-        Paciente paciente = new Paciente();
+        paciente = new Paciente();
         paciente.setNombre("nombre");
         paciente.setApellido("apellido");
         paciente.setDni("123");
@@ -47,23 +53,25 @@ class TurnoServiceTest {
         paciente.setFechaIngreso(LocalDate.now());
 
 
-        pacienteService.guardar(paciente);
-        Paciente pacienteGuardado = pacienteService.guardar(paciente);
-
-
-        Odontologo odontologo = new Odontologo();
+        odontologo = new Odontologo();
         odontologo.setNombre("nombre");
         odontologo.setApellido("apellido");
         odontologo.setMatricula(123);
 
-        Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
-
-        Turno turno = new Turno();
+        turno = new Turno();
         turno.setPaciente(paciente);
         turno.setOdontologo(odontologo);
         turno.setFecha(LocalDate.now());
         turno.setHora(LocalTime.now());
+    }
 
+
+    @Test
+    public void testListarTurnos(){
+        //DADO
+        pacienteService.guardar(paciente);
+        Paciente pacienteGuardado = pacienteService.guardar(paciente);
+        Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
         Turno turnoGuardado = turnoService.guardar(turno);
 
         //CUANDO
@@ -79,39 +87,10 @@ class TurnoServiceTest {
     public void testGuardarTurno() {
 
         //DADO
-        Domicilio domicilio = new Domicilio();
-        domicilio.setCalle("calle1");
-        domicilio.setLocalidad("localidad1");
-        domicilio.setNumero(1);
-        domicilio.setProvincia("provincia1");
-
-
-        Paciente paciente = new Paciente();
-        paciente.setNombre("nombre");
-        paciente.setApellido("apellido");
-        paciente.setDni("123");
-        paciente.setDomicilio(domicilio);
-        paciente.setFechaIngreso(LocalDate.now());
-
 
         pacienteService.guardar(paciente);
         Paciente pacienteGuardado = pacienteService.guardar(paciente);
-
-
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
-
-        Turno turno = new Turno();
-        turno.setPaciente(paciente);
-        turno.setOdontologo(odontologo);
-        turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
-
-
 
         //CUANDO
         Turno turnoGuardado = turnoService.guardar(turno);
@@ -126,38 +105,10 @@ class TurnoServiceTest {
     public void testEliminarTurno(){
 
         //DADO
-        Domicilio domicilio = new Domicilio();
-        domicilio.setCalle("calle1");
-        domicilio.setLocalidad("localidad1");
-        domicilio.setNumero(1);
-        domicilio.setProvincia("provincia1");
-
-
-        Paciente paciente = new Paciente();
-        paciente.setNombre("nombre");
-        paciente.setApellido("apellido");
-        paciente.setDni("123");
-        paciente.setDomicilio(domicilio);
-        paciente.setFechaIngreso(LocalDate.now());
-
 
         pacienteService.guardar(paciente);
         Paciente pacienteGuardado = pacienteService.guardar(paciente);
-
-
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
-
-        Turno turno = new Turno();
-        turno.setPaciente(pacienteGuardado);
-        turno.setOdontologo(odontologoGuardado);
-        turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
-
         Turno turnoGuardado = turnoService.guardar(turno);
 
 
@@ -178,38 +129,10 @@ class TurnoServiceTest {
 
 
         //DADO
-        Domicilio domicilio = new Domicilio();
-        domicilio.setCalle("calle1");
-        domicilio.setLocalidad("localidad1");
-        domicilio.setNumero(1);
-        domicilio.setProvincia("provincia1");
-
-
-        Paciente paciente = new Paciente();
-        paciente.setNombre("nombre");
-        paciente.setApellido("apellido");
-        paciente.setDni("123");
-        paciente.setDomicilio(domicilio);
-        paciente.setFechaIngreso(LocalDate.now());
-
 
         pacienteService.guardar(paciente);
         Paciente pacienteGuardado = pacienteService.guardar(paciente);
-
-
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
-
-        Turno turno = new Turno();
-        turno.setPaciente(paciente);
-        turno.setOdontologo(odontologo);
-        turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
-
         Turno turnoGuardado = turnoService.guardar(turno);
 
         //CUANDO
@@ -223,38 +146,9 @@ class TurnoServiceTest {
     @Transactional
     public void testActualizarTurno(){
         //DADO
-        Domicilio domicilio = new Domicilio();
-        domicilio.setCalle("calle1");
-        domicilio.setLocalidad("localidad1");
-        domicilio.setNumero(1);
-        domicilio.setProvincia("provincia1");
-
-
-        Paciente paciente = new Paciente();
-        paciente.setNombre("nombre");
-        paciente.setApellido("apellido");
-        paciente.setDni("123");
-        paciente.setDomicilio(domicilio);
-        paciente.setFechaIngreso(LocalDate.now());
-
-
         pacienteService.guardar(paciente);
         Paciente pacienteGuardado = pacienteService.guardar(paciente);
-
-
-        Odontologo odontologo = new Odontologo();
-        odontologo.setNombre("nombre");
-        odontologo.setApellido("apellido");
-        odontologo.setMatricula(123);
-
         Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
-
-        Turno turno = new Turno();
-        turno.setPaciente(paciente);
-        turno.setOdontologo(odontologo);
-        turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
-
         Turno turnoGuardado = turnoService.guardar(turno);
         turnoGuardado.setFecha(LocalDate.of(2024, 8, 12));
 
