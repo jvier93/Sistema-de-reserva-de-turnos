@@ -13,6 +13,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="../js/utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/turnosJS/listar.js"></script>
   </head>
@@ -22,7 +23,7 @@
         <div class="container-fluid">
           <img
             style="width: 30px; margin: 0px 5px"
-            src="./assets/logo.png"
+            src="../assets/logo.png"
             src="../assets/logo.png"
           />
           <a class="navbar-brand" href="/">Consultorio Odontologico</a>
@@ -118,6 +119,20 @@
           </div>
         </div>
       </nav>
+      <h1 class="my-5">Listar Turnos</h1>
+
+      <table id="tablaTurnos" class="table my-5">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Odontologo</th>
+            <th scope="col">Paciente</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Hora</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
 
     <script

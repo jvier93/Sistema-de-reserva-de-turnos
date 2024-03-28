@@ -20,7 +20,7 @@
         <div class="container-fluid">
           <img
             style="width: 30px; margin: 0px 5px"
-            src="./assets/logo.png"
+            src="../assets/logo.png"
             alt=""
           />
           <a class="navbar-brand" href="/">Consultorio Odontologico</a>
@@ -117,11 +117,12 @@
         </div>
       </nav>
       <div class="col-md-6">
-        <h1 class="mt-5">Crear Paciente</h1>
+        <h1 class="mt-5">Actualizar Paciente</h1>
         <form id="formActualizarPaciente" class="mt-4">
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input
+              required
               type="text"
               class="form-control"
               id="nombre"
@@ -132,6 +133,7 @@
           <div class="mb-3">
             <label for="apellido" class="form-label">Apellido</label>
             <input
+              required
               type="text"
               class="form-control"
               id="apellido"
@@ -140,33 +142,12 @@
           </div>
           <div class="mb-3">
             <label for="dni" class="form-label">DNI</label>
-            <input type="number" class="form-control" id="dni" name="dni" />
-          </div>
-          <div class="mb-3">
-            <label for="calle" class="form-label">Calle</label>
-            <input type="text" class="form-control" id="calle" name="calle" />
-          </div>
-          <div class="mb-3">
-            <label for="numero" class="form-label">Número</label>
-            <input type="text" class="form-control" id="numero" name="numero" />
-          </div>
-
-          <div class="mb-3">
-            <label for="localidad" class="form-label">Localidad</label>
             <input
-              type="text"
+              required
+              type="number"
               class="form-control"
-              id="localidad"
-              name="localidad"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="provincia" class="form-label">Provincia</label>
-            <input
-              type="text"
-              class="form-control"
-              id="provincia"
-              name="provincia"
+              id="dni"
+              name="dni"
             />
           </div>
 
@@ -175,6 +156,7 @@
               >Fecha de Ingreso</label
             >
             <input
+              required
               type="date"
               class="form-control"
               id="fechaIngreso"

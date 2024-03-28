@@ -20,13 +20,11 @@ function crearFilaEnTabla(tBody, datos = null) {
       <td>${datos.nombre}</td>
       <td>${datos.apellido}</td>
       <td>${datos.matricula}</td>
-      <td><a class="btn" href="actualizar.html?id=${datos.id}">editar</a> <button onClick="eliminarOdontologo(${datos.id})">eliminar</button></td>
+      <td><a class="btn btn-secondary btn-sm" href="actualizar.html?id=${datos.id}">editar</a> <button class="btn btn-danger btn-sm" onClick="eliminarOdontologo(${datos.id})">eliminar</button></td>
     `;
 
   tBody.appendChild(fila);
 }
-
-//Odontologos
 
 function fetchOdontologos(apiUrl = null) {
   if (apiUrl === null) {

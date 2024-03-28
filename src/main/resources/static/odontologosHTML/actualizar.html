@@ -20,7 +20,7 @@
         <div class="container-fluid">
           <img
             style="width: 30px; margin: 0px 5px"
-            src="./assets/logo.png"
+            src="../assets/logo.png"
             alt=""
           />
           <a class="navbar-brand" href="/">Consultorio Odontologico</a>
@@ -117,11 +117,12 @@
         </div>
       </nav>
       <div class="col-md-6">
-        <h1 class="mt-5">Crear Odontologo</h1>
+        <h1 class="mt-5">Actualizar Odontologo</h1>
         <form id="formActualizarOdontologo" class="mt-4">
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input
+              required
               type="text"
               class="form-control"
               id="nombre"
@@ -132,6 +133,7 @@
           <div class="mb-3">
             <label for="apellido" class="form-label">Apellido</label>
             <input
+              required
               type="text"
               class="form-control"
               id="apellido"
@@ -141,7 +143,8 @@
           <div class="mb-3">
             <label for="matricula" class="form-label">Nro. Matricula</label>
             <input
-              type="text"
+              required
+              type="number"
               class="form-control"
               id="matricula"
               name="matricula"

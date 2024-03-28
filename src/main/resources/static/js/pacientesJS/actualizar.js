@@ -1,5 +1,5 @@
 const OBTENER_PACIENTE_URL = "http://localhost:8080/paciente";
-const ACTUALIZAR_PACIENTE_URL = "http://localhost:8080/paciente/actualizar"
+const ACTUALIZAR_PACIENTE_URL = "http://localhost:8080/paciente/actualizar";
 
 function onLoad() {
   const url = new URL(window.location.href);
@@ -53,10 +53,6 @@ function cargarPacienteEnFormulario(idFormulario = null, datos = null) {
   form.querySelector('[name="nombre"]').value = datos.nombre;
   form.querySelector('[name="apellido"]').value = datos.apellido;
   form.querySelector('[name="dni"]').value = datos.dni;
-  form.querySelector('[name="calle"]').value = datos.domicilio.calle;
-  form.querySelector('[name="numero"]').value = datos.domicilio.numero;
-  form.querySelector('[name="localidad"]').value = datos.domicilio.localidad;
-  form.querySelector('[name="provincia"]').value = datos.domicilio.provincia;
   form.querySelector('[name="fechaIngreso"]').value = datos.fechaIngreso;
   form.querySelector("#submit").setAttribute("data-paciente-id", datos.id);
 }
@@ -70,10 +66,6 @@ function submitForm(e) {
   const nombre = formData.get("nombre");
   const apellido = formData.get("apellido");
   const dni = formData.get("dni");
-  const calle = formData.get("calle");
-  const numero = formData.get("numero");
-  const localidad = formData.get("localidad");
-  const provincia = formData.get("provincia");
   const fechaIngreso = formData.get("fechaIngreso");
 
   const id = form.querySelector("#submit").getAttribute("data-paciente-id");
@@ -84,30 +76,26 @@ function submitForm(e) {
     nombre,
     apellido,
     dni,
-    calle,
-    numero,
-    localidad,
-    provincia,
     fechaIngreso
   );
 }
 
-function actualizarPaciente(apiUrl = null, id, nombre, apellido, dni, calle, numero, localidad, provincia, fechaIngreso) {
+function actualizarPaciente(
+  apiUrl = null,
+  id,
+  nombre,
+  apellido,
+  dni,
+  fechaIngreso
+) {
   const paciente = {
     id: id,
     nombre: nombre,
     apellido: apellido,
     dni: dni,
-    domicilio: {
-       calle: calle,
-       numero: numero,
-       localidad: localidad,
-       provincia: provincia,
-    },
-     fechaIngreso: fechaIngreso,
-
+    fechaIngreso,
   };
-
+  console.log(paciente);
   fetch(apiUrl, {
     method: "PUT",
     headers: {
@@ -116,7 +104,6 @@ function actualizarPaciente(apiUrl = null, id, nombre, apellido, dni, calle, num
     body: JSON.stringify(paciente),
   })
     .then((respuesta) => {
-      console.log(respuesta);
       if (!respuesta.ok) {
         throw new Error(`Error response status ${respuesta.status}`);
       }
@@ -126,9 +113,9 @@ function actualizarPaciente(apiUrl = null, id, nombre, apellido, dni, calle, num
         text: "Paciente actualizado exitosamente",
         icon: "success",
       }).then(() => {
-        window.location.href = "http://localhost:8080/pacientesHTML/listar.html";
+        window.location.href =
+          "http://localhost:8080/pacientesHTML/listar.html";
       });
-
     })
 
     .catch((error) => {
