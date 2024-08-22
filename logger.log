@@ -515,3 +515,7 @@
 [2024-03-26 22:56:29] [ ERROR] [PacienteService:41] Paciente no encontrado con id: 2
 [2024-03-26 22:56:40] [ ERROR] [OdontologoService:42] Odontologo no encontrado con id: 1223
 [2024-03-26 22:56:40] [ ERROR] [OdontologoService:42] Odontologo no encontrado con id: 6
+[2024-08-22 12:20:52] [ ERROR] [OdontologoService:42] Odontologo no encontrado con id: 1223
+[2024-08-22 12:20:52] [ ERROR] [OdontologoService:42] Odontologo no encontrado con id: 6
+[2024-08-22 12:20:52] [ ERROR] [PacienteService:41] Paciente no encontrado con id: 2
+[2024-08-22 12:20:52] [ ERROR] [TurnoService:57] Turno no encontrado con id: 4

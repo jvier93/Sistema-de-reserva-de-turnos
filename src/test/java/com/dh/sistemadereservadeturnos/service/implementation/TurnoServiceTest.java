@@ -62,7 +62,7 @@ class TurnoServiceTest {
         turno.setPaciente(paciente);
         turno.setOdontologo(odontologo);
         turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
+        turno.setHora(String.valueOf(LocalTime.now()));
 
         Turno turnoGuardado = turnoService.guardar(turno);
 
@@ -109,7 +109,7 @@ class TurnoServiceTest {
         turno.setPaciente(paciente);
         turno.setOdontologo(odontologo);
         turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
+        turno.setHora(String.valueOf(LocalTime.now()));
 
 
 
@@ -156,7 +156,7 @@ class TurnoServiceTest {
         turno.setPaciente(pacienteGuardado);
         turno.setOdontologo(odontologoGuardado);
         turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
+        turno.setHora(String.valueOf(LocalTime.now()));
 
         Turno turnoGuardado = turnoService.guardar(turno);
 
@@ -208,7 +208,7 @@ class TurnoServiceTest {
         turno.setPaciente(paciente);
         turno.setOdontologo(odontologo);
         turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
+        turno.setHora(String.valueOf(LocalTime.now()));
 
         Turno turnoGuardado = turnoService.guardar(turno);
 
@@ -253,7 +253,7 @@ class TurnoServiceTest {
         turno.setPaciente(paciente);
         turno.setOdontologo(odontologo);
         turno.setFecha(LocalDate.now());
-        turno.setHora(LocalTime.now());
+        turno.setHora(String.valueOf(LocalTime.now()));
 
         Turno turnoGuardado = turnoService.guardar(turno);
         turnoGuardado.setFecha(LocalDate.of(2024, 8, 12));
