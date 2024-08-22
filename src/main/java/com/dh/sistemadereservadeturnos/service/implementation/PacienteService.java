@@ -58,6 +58,7 @@ public class PacienteService implements IPacienteService {
 
     @Override
     public void actualizar(Paciente paciente) {
+
         Optional<Paciente> pacienteAActualizar = pacienteRepository.findById(paciente.getId());
      if (pacienteAActualizar.isEmpty()){
          logger.error("Paciente a actualizar no encontrado con id: " +paciente.getId());

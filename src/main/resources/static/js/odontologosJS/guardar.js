@@ -27,7 +27,6 @@ function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
     body: JSON.stringify(nuevoOdontologo),
   })
     .then((respuesta) => {
-      console.log(respuesta);
       if (!respuesta.ok) {
         throw new Error(`Error response status ${respuesta.status}`);
       }
@@ -51,7 +50,6 @@ function guardarOdontologo(apiUrl = null, nombre, apellido, matricula) {
 }
 
 function onLoad() {
-
   const form = document.getElementById("formCrearOdontologo");
   form.addEventListener("submit", submitForm);
 }

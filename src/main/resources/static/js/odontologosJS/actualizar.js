@@ -89,7 +89,6 @@ function actualizarOdontologo(apiUrl = null, id, nombre, apellido, matricula) {
     body: JSON.stringify(odontologo),
   })
     .then((respuesta) => {
-      console.log(respuesta);
       if (!respuesta.ok) {
         throw new Error(`Error response status ${respuesta.status}`);
       }
@@ -98,6 +97,9 @@ function actualizarOdontologo(apiUrl = null, id, nombre, apellido, matricula) {
         title: "Actualizar",
         text: "Odontólogo actualizado exitosamente",
         icon: "success",
+      }).then(() => {
+        window.location.href =
+          "http://localhost:8080/odontologosHTML/listar.html";
       });
     })
 

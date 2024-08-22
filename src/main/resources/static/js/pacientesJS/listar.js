@@ -1,15 +1,17 @@
-const LISTAR_PACIENTES_URL = "http://localhost:8080/paciente/listar";
-const ELIMINAR_PACIENTE_URL = "http://localhost:8080/paciente/eliminar"
-
 function llenarLista(idTabla = null, datos = null) {
+  let tbody = document.getElementById(idTabla).getElementsByTagName("tbody")[0];
+
+  if (datos.length === 0) {
+    tbody.innerHTML = `<p>No hay datos</p>`;
+    return;
+  }
+  tbody.innerHTML = ``;
   datos.forEach((paciente) => {
-    crearFilaEnTabla(idTabla, paciente);
+    crearFilaEnTabla(tbody, paciente);
   });
 }
 
-function crearFilaEnTabla(idTabla = null, datos = null) {
-  let tbody = document.getElementById(idTabla).getElementsByTagName("tbody")[0];
-
+function crearFilaEnTabla(tbody = null, datos = null) {
   let fila = document.createElement("tr");
 
   fila.innerHTML = `
@@ -18,18 +20,20 @@ function crearFilaEnTabla(idTabla = null, datos = null) {
       <td>${datos.nombre}</td>
       <td>${datos.apellido}</td>
       <td>${datos.dni}</td>
-      <td>${datos.domicilio ? datos.domicilio.calle : ''}</td>
-      <td>${datos.domicilio ? datos.domicilio.numero : ''}</td>
+      <td>${datos.domicilio ? datos.domicilio.calle : ""}</td>
+      <td>${datos.domicilio ? datos.domicilio.numero : ""}</td>
       <td>${datos.fechaIngreso}</td>
 
-      <td><a href="actualizar.html?id=${datos.id}">Actualizar</a></td>
-      <td><button onClick="eliminarPaciente(${datos.id})">eliminar</button></td>
+      <td><a class="btn btn-secondary btn-sm" href="actualizar.html?id=${
+        datos.id
+      }">Actualizar</a></td>
+      <td><button class="btn btn-danger btn-sm" onClick="eliminarPaciente(${
+        datos.id
+      })">eliminar</button></td>
     `;
 
   tbody.appendChild(fila);
 }
-
-//Odontologos
 
 function fetchPacientes(apiUrl = null) {
   fetch(apiUrl)
@@ -41,7 +45,6 @@ function fetchPacientes(apiUrl = null) {
       return respuesta.json();
     })
     .then((datos) => {
-    console.log(datos);
       llenarLista("tablaPacientes", datos);
     })
     .catch((error) => {
